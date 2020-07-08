@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon ./server/server.js",
+    "build": "webpack --mode=development --watch"
   },
   "repository": {
     "type": "git",
@@ -18,18 +20,34 @@
   },
   "homepage": "https://github.com/FEC-Bell/Jeremy-proxy-server#readme",
   "dependencies": {
-    "@babel/core": "^7.10.4",
     "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
     "axios": "^0.19.2",
-    "babel-loader": "^8.1.0",
-    "eslint": "^7.4.0",
-    "eslint-config-hackreactor": "github:reactorcore/eslint-config-hackreactor",
+    "bluebird": "^3.7.2",
+    "body-parser": "^1.19.0",
+    "cloudinary": "^1.22.0",
     "express": "^4.17.1",
+    "jest": "^26.1.0",
     "jquery": "^3.5.1",
+    "moment": "^2.27.0",
+    "mongo-seeding": "^3.4.1",
+    "mongo-seeding-cli": "^3.4.1",
+    "mongoose": "^5.9.19",
     "nodemon": "^2.0.4",
-    "path": "^0.12.7",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "styled-components": "^5.1.1",
+    "webpack": "^4.43.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/preset-react": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "eslint": "^7.3.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.1",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.4"
   }
 }
