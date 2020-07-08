@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const { default: Axios } = require('axios');
 
 const app = express();
 const PORT = 3000;
@@ -29,7 +30,11 @@ app.get('/api/tags/:gameId', (req, res) => {
 //dlc
 app.get('/api/dlc/:gameId', (req, res) => {
   let param = req.params.gameId;
-
+  console.log('DLC Request received!');
+  Axios.get(dlcURL + param).then(({ data }) => {
+    console.log(data);
+    res.status(200).send(data);
+  })
 });
 
 
