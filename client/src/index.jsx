@@ -55,7 +55,8 @@ class App extends React.Component {
 
 
 
-        <div id="reviews-graph"></div>
+        <div id="reviews-graph">
+        </div>
         <div id="reviews"></div>
         <div>
           Stuff

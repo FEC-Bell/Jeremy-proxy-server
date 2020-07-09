@@ -23,3 +23,7 @@ export const Purchase_area = styled.div`
 export const Dlc_area = styled.div`
 
 `;
+
+export const Block = styled.div`
+
+`;
