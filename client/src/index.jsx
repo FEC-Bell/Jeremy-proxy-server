@@ -35,7 +35,9 @@ class App extends React.Component {
           <div id='title'></div>
           <div id='block'>
             <div className='block_element' id="photo-carousel"></div>
-            <div className='block_element' id='description-placeholder'></div>
+            <div className='block_element' id='description-placeholder'>
+              <div id='tags'></div>
+            </div>
           </div>
           <div id='content_block'>
             <Right_col id='right_col metadata'></Right_col>
@@ -51,6 +53,7 @@ class App extends React.Component {
             </Left_col>
 
           </div>
+          <div id='graph'>hello</div>
         </div>
 
 
