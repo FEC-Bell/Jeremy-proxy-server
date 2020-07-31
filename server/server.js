@@ -1,21 +1,22 @@
 const express = require('express');
 const path = require('path');
-// const pug = require('pug');
 const { default: Axios } = require('axios');
 
 const app = express();
-const PORT = 3000;
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
-const reviewURL = 'http://localhost:3001/api/gamereviews/';
-const graphURL = 'http://localhost:3002/api/reviewcount/';
-const dlcURL = 'http://localhost:3003/api/dlc/';
-const tagURL = 'http://localhost:3006/api/tags/';
-const carouselURL = 'http://localhost:3004/api/media/';
+const reviewURL = 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/api/gamereviews/';
+const graphURL = 'http://44.233.13.178:3002/api/reviews/';
+const dlcURL = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/dlc/';
+// const dlcURL = 'http://localhost:8080/api/dlc/';
+const nameUrl = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/name/';
+const tagURL = 'http://44.233.13.178:3006/api/tags/';
+const carouselURL = 'http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/api/media/';
+const gameDescURL = '`http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/api/description/';
 
-// app.set('view engine', 'pug');
 app.get('/app/:id', (req, res) => {
   console.log('id request!');
   res.status(200).sendFile(path.join(__dirname, '/../client/dist/index.html'));
@@ -35,9 +36,22 @@ app.get('/api/gamereviews/:gameId', (req, res) => {
     });
 });
 
+//descriptions
+app.get('/api/description/:gameId', (req, res) => {
+  let param = req.params.gameId;
+  console.log('Description Requested! id: ', param);
+  Axios.get(gameDescURL + param)
+    .then(({ data }) => {
+      // console.log(data);
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    });
+});
 
 //graph
-app.get('/api/reviewcount/:gameId', (req, res) => {
+app.get('/api/reviews/:gameId', (req, res) => {
   let param = req.params.gameId;
   console.log('Graph Request received! id: ', param);
   Axios.get(graphURL + param).then(({ data }) => {
@@ -79,7 +93,13 @@ app.get('/api/dlc/:gameId', (req, res) => {
 //game name
 app.get('/api/name/:gameId', (req, res) => {
   let param = req.params.gameId;
-
+  Axios.get(nameUrl + param)
+    .then(({ data }) => {
+      res.status(200).send(data);
+    })
+    .catch((err) => {
+      console.error(err);
+    })
 });
 
 
@@ -99,6 +119,6 @@ app.get('/api/media/:gameId', (req, res) => {
 });
 
 
-app.listen(PORT, () => {
-  console.log(`listening on port ${PORT}`);
+app.listen(port, () => {
+  console.log(`listening on port ${port}`);
 });
