@@ -15,7 +15,7 @@ const dlcURL = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/ap
 const nameUrl = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/name/';
 const tagURL = 'http://44.233.13.178:3006/api/tags/';
 const carouselURL = 'http://ec2-18-188-192-44.us-east-2.compute.amazonaws.com:3004/api/media/';
-const gameDescURL = '`http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/api/description/';
+const gameDescURL = 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3005/api/description/';
 
 app.get('/app/:id', (req, res) => {
   console.log('id request!');

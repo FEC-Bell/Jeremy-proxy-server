@@ -8,8 +8,33 @@ html, body {
   background: #1B2838;
 }
 
+.header {
+  background-color: rgb(23, 26, 33);
+  width: 100%;
+}
+
+#header {
+  background-image: url(https://res.cloudinary.com/jeremylfchen/image/upload/v1596247416/Screen_Shot_2020-07-31_at_7.02.48_PM_bgxeem.png);
+  margin-left: auto;
+  margin-right: auto;
+  width: 948px;
+  height: 102px;
+}
+
+#dropdown {
+  background-image: url(https://res.cloudinary.com/jeremylfchen/image/upload/v1596249927/Screen_Shot_2020-07-31_at_7.10.04_PM_jpxtfb.png);
+  margin-left: auto;
+  margin-right: auto;
+  width:943px;
+  height: 37px;
+  margin-top: 30px;
+}
+
+
+
 .block_element{
   max-width: 750px;
+  padding-right: 18px;
 }
 
 .block_element2{
@@ -17,19 +42,19 @@ html, body {
   flex-direction: column;
 }
 #page_content{
-  display: flex;
-  flex-direction: row;
+  /* display: flex;
+  flex-direction: row; */
   width: 940px;
 }
 #topBlock{
   color: rgb(198,212,223);
   padding-bottom: 1px;
+  margin-top: 15px;
 }
 #topContent{
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  padding-bottom: 12px;
   margin-left: 215.5px;
   margin-right: 215.5px;
   padding-bottom: 12px;
@@ -42,4 +67,22 @@ html, body {
   margin-left: 215.5px;
   margin-right: 215.5px;
   justify-content: center;
+}
+
+#reviews-graph {
+  margin-left: 215.5px;
+  margin-right: 215.5px;
+}
+
+#title {
+  margin-top: 30px;
+  margin-left: 215.5px;
+  margin-right: 215.5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 32px;
+  text-overflow: ellipsis;
+  text-align: left;
+  color: rgb(255, 255, 255);
 }

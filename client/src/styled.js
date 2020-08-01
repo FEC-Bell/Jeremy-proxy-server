@@ -1,6 +1,9 @@
 import styled from 'styled-components';
 
 export const Right_col = styled.div`
+{
+  
+}
 margin-top: 16px;
 overflow: hidden;
 width: 308px;
