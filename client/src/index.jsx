@@ -36,14 +36,14 @@ class App extends React.Component {
             <div id='topContent'>
               <div className='block_element' id="photo-carousel"></div>
               <div className='block_element2' id='game-description'></div>
-              <div id='tags'></div>
+              <div id='user-tags'></div>
             </div>
           </div>
         </div>
         <div id='middle_content'>
           <div id='content_block'>
-              <Right_col id='right_col metadata'></Right_col>
-              <Left_col id='left_col description'>
+              <div className='right_col'></div>
+              <div className='left_col'>
                 <div id='purchase_area'>
                   <div id='buy_and_bundle'>
                   </div>
@@ -51,7 +51,7 @@ class App extends React.Component {
                     <div id="dlc"></div>
                   </div>
                 </div>
-              </Left_col>
+              </div>
           </div>
         </div>
         <div id="reviews-graph">

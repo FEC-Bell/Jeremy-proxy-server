@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(express.static(__dirname + '/../client/dist'));
 
 const reviewURL = 'http://ec2-13-59-202-34.us-east-2.compute.amazonaws.com:3001/api/gamereviews/';
-const graphURL = 'http://44.233.13.178:3002/api/reviews/';
+const graphURL = 'http://44.233.13.178:3002/api/reviewcount/';
 const dlcURL = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/dlc/';
 // const dlcURL = 'http://localhost:8080/api/dlc/';
 const nameUrl = 'http://ec2-13-56-224-137.us-west-1.compute.amazonaws.com:3003/api/name/';
